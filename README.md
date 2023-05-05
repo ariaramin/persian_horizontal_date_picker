@@ -10,7 +10,7 @@ A customizable horizontal date picker library for Flutter. Support both jalali a
 
 ```yaml
 dependencies:
-  persian_horizontal_date_picker: ^0.1.0
+  persian_horizontal_date_picker: ^0.1.5
 ```
 
 2.Install packages from the command line
