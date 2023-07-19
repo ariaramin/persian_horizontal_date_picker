@@ -25,3 +25,7 @@ update README.md file
 ## 0.1.6
 
 add some new parameters
+
+## 0.1.7
+
+fix some bugs

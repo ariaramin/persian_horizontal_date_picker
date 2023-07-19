@@ -184,7 +184,7 @@ class _PersianHorizontalDatePickerState
                               Text(
                                 widget.isPersianDate!
                                     ? itemDate.getJalaliDay()
-                                    : itemDate.day.toString(),
+                                    : itemDate.getGregorianDay(),
                                 style: isActive
                                     ? widget.selectedDayTextStyle ??
                                         TextStyle(
@@ -202,7 +202,7 @@ class _PersianHorizontalDatePickerState
                               Text(
                                 widget.isPersianDate!
                                     ? itemDate.getJalaliMonth()
-                                    : itemDate.month.toString(),
+                                    : itemDate.getGregorianMonth(),
                                 style: isActive
                                     ? widget.selectedMonthTextStyle ??
                                         TextStyle(
