@@ -10,7 +10,7 @@ A customizable horizontal date picker library for Flutter. Support both jalali a
 
 ```yaml
 dependencies:
-  persian_horizontal_date_picker: ^0.1.5
+  persian_horizontal_date_picker: ^0.1.6
 ```
 
 2.Install packages from the command line
@@ -45,29 +45,27 @@ PersianHorizontalDatePicker(
 | startDate                   | DateTime                 |                        |
 | endDate                     | DateTime                 |                        |
 | initialSelectedDate         | DateTime?                | null                   |
-| markedDates                 | List<DateTime\>?          | null                   |
+| markedDates                 | List<DateTime\>?         | null                  |
 | onDateSelected              | Function(DateTime? date) |                        |
 | isPersianDate               | bool?                    | true                   |
 | datePickerHieght            | double?                  | 112                    |
-| itemPadding                 | double?                  | 8                      |
-| itemWidth                   | double?                  | 84                     |
-| itemRadius                  | double?                  | 56                     |
-| selectedItemWidth           | double?                  | 84                     |
-| selectedItemRadius          | double?                  | 56                     |
-| itemBackgroundColor         | Color?                   | Color(0xFFBBDEFB)      |
-| selectedItemBackgroundColor | Color?                   | Colors.blue            |
-| itemWeekDayTextStyle        | TextStyle?               | TextStyle(fontFamily: "Shabnam", fontSize: 12, color: Colors.blue)  |
-| selectedItemWeekDayTextStyle | TextStyle?              | TextStyle(fontFamily: "Shabnam", fontSize: 12, color: Colors.white) |
-| itemDayTextStyle            | TextStyle?               | TextStyle(fontFamily: "Shabnam", fontSize: 16, color: Colors.blue, fontWeight: FontWeight.bold)  |
-| selectedItemDayTextStyle    | TextStyle?               | TextStyle(fontFamily: "Shabnam", fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold) |
-| itemMonthTextStyle        | TextStyle?               | TextStyle(fontFamily: "Shabnam", fontSize: 12, color: Colors.blue)  |
-| selectedItemMonthTextStyle | TextStyle?              | TextStyle(fontFamily: "Shabnam", fontSize: 12, color: Colors.white) |
+| margin                      | double?                  | 8                      |
+| contentPadding              | EdgeInsets?              | EdgeInsets.all(8)      |
+| width                   | double?                  | 84                     |
+| radius                  | double?                  | 56                     |
+| backgroundColor         | Color?                   | Color(0xFFBBDEFB)      |
+| selectedBackgroundColor | Color?                   | Colors.blue            |
+| textColor         | Color?                   | Colors.blue   |
+| selectedTextColor | Color?                   | Colors.white            |
+| weekDayTextStyle        | TextStyle?               | TextStyle(fontSize: 12, color: Colors.blue)  |
+| selectedWeekDayTextStyle | TextStyle?              | TextStyle(fontSize: 12, color: Colors.white) |
+| dayTextStyle            | TextStyle?               | TextStyle(fontSize: 16, color: Colors.blue, fontWeight: FontWeight.bold)  |
+| selectedDayTextStyle    | TextStyle?               | TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold) |
+| monthTextStyle        | TextStyle?               | TextStyle(fontSize: 12, color: Colors.blue)  |
+| selectedMonthTextStyle | TextStyle?              | TextStyle(fontSize: 12, color: Colors.white) |
 | hasSelectedItemShadow       | bool?                    | true                   |
 | markedDotColor              | Color?                   | Colors.blue            |
 | selectedMarkedDotColor      | Color?                   | Colors.white           |
 
 ## Donation
-
-<a href="https://www.coffeebede.com/ariaramin">
-<img class="img-fluid" src="https://coffeebede.ir/DashboardTemplateV2/app-assets/images/banner/default-yellow.svg" width=30%/>
-</a>
+<a href="https://www.coffeebede.com/ariaramin"> <img class="img-fluid" src="https://coffeebede.ir/DashboardTemplateV2/app-assets/images/banner/default-yellow.svg" width="210" /> </a>

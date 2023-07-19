@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Persian Horizontal Date Picker',
+      theme: ThemeData(fontFamily: 'Shabnam'),
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Persian Horizontal Date Picker"),
@@ -27,46 +28,14 @@ class MyApp extends StatelessWidget {
                 initialSelectedDate: DateTime.now(),
                 markedDates: [DateTime.now()],
                 isPersianDate: true,
-                datePickerHieght: 112,
-                itemPadding: 8,
-                itemWidth: 84,
-                itemRadius: 56,
-                selectedItemWidth: 84,
-                selectedItemRadius: 56,
-                itemBackgroundColor: const Color(0xFFBBDEFB),
-                selectedItemBackgroundColor: Colors.blue,
-                itemWeekDayTextStyle: const TextStyle(
-                  fontFamily: "Shabnam",
-                  fontSize: 12,
-                  color: Colors.blue,
-                ),
-                selectedItemWeekDayTextStyle: const TextStyle(
-                  fontFamily: "Shabnam",
-                  fontSize: 12,
-                  color: Colors.white,
-                ),
-                itemDayTextStyle: const TextStyle(
-                  fontFamily: "Shabnam",
-                  fontSize: 16,
-                  color: Colors.blue,
-                  fontWeight: FontWeight.bold,
-                ),
-                selectedItemDayTextStyle: const TextStyle(
-                  fontFamily: "Shabnam",
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-                itemMonthTextStyle: const TextStyle(
-                  fontFamily: "Shabnam",
-                  fontSize: 12,
-                  color: Colors.blue,
-                ),
-                selectedItemMonthTextStyle: const TextStyle(
-                  fontFamily: "Shabnam",
-                  fontSize: 12,
-                  color: Colors.white,
-                ),
+                datePickerHeight: 112,
+                contentPadding: const EdgeInsets.all(8),
+                width: 84,
+                radius: 56,
+                backgroundColor: const Color(0xFFBBDEFB),
+                selectedBackgroundColor: Colors.blue,
+                textColor: Colors.blue,
+                selectedTextColor: Colors.white,
                 hasSelectedItemShadow: true,
                 markedDotColor: Colors.blue,
                 selectedMarkedDotColor: Colors.white,
@@ -74,7 +43,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
           ),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
+        ),
       ),
     );
   }

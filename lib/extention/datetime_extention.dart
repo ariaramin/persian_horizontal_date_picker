@@ -2,15 +2,10 @@ import 'package:shamsi_date/shamsi_date.dart';
 
 extension DateHelperExtension on DateTime {
   int dateDifference(DateTime secondDate) {
-    return DateTime(year, month, day)
-        .difference(
-          DateTime(
-            secondDate.year,
-            secondDate.month,
-            secondDate.day,
-          ),
-        )
-        .inDays;
+    final firstDate = DateTime(year, month, day);
+    final difference = firstDate.difference(
+        DateTime(secondDate.year, secondDate.month, secondDate.day));
+    return difference.inDays;
   }
 
   bool isSameDate(DateTime other) {
@@ -18,32 +13,32 @@ extension DateHelperExtension on DateTime {
   }
 
   String getJalaliDay() {
-    final f = Jalali.fromDateTime(this).formatter;
-    return f.d;
+    final formatter = Jalali.fromDateTime(this).formatter;
+    return formatter.d;
   }
 
   String getJalaliWeekDay() {
-    final f = Jalali.fromDateTime(this).formatter;
-    return f.wN;
+    final formatter = Jalali.fromDateTime(this).formatter;
+    return formatter.wN;
   }
 
   String getJalaliMonth() {
-    final f = Jalali.fromDateTime(this).formatter;
-    return f.mN;
+    final formatter = Jalali.fromDateTime(this).formatter;
+    return formatter.mN;
   }
 
   String getGregorianDay() {
-    final f = Jalali.fromDateTime(this).toGregorian().formatter;
-    return f.d;
+    final formatter = Jalali.fromDateTime(this).toGregorian().formatter;
+    return formatter.d;
   }
 
   String getGregorianWeekDay() {
-    final f = Jalali.fromDateTime(this).toGregorian().formatter;
-    return f.wN;
+    final formatter = Jalali.fromDateTime(this).toGregorian().formatter;
+    return formatter.wN;
   }
 
   String getGregorianMonth() {
-    final f = Jalali.fromDateTime(this).toGregorian().formatter;
-    return f.mN;
+    final formatter = Jalali.fromDateTime(this).toGregorian().formatter;
+    return formatter.mN;
   }
 }
