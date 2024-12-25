@@ -10,7 +10,7 @@ A customizable horizontal date picker library for Flutter. Support both jalali a
 
 ```yaml
 dependencies:
-  persian_horizontal_date_picker: ^0.1.7
+  persian_horizontal_date_picker: ^2.0.0
 ```
 
 2.Install packages from the command line
@@ -40,32 +40,37 @@ PersianHorizontalDatePicker(
 
 ## Parameters
 
-| Parameter                   | Type                     | Default                |
-|-----------------------------|--------------------------|------------------------|
-| startDate                   | DateTime                 |                        |
-| endDate                     | DateTime                 |                        |
-| initialSelectedDate         | DateTime?                | null                   |
-| markedDates                 | List<DateTime\>?         | null                  |
-| onDateSelected              | Function(DateTime? date) |                        |
-| isPersianDate               | bool?                    | true                   |
-| datePickerHieght            | double?                  | 112                    |
-| margin                      | double?                  | 8                      |
-| contentPadding              | EdgeInsets?              | EdgeInsets.all(8)      |
-| width                   | double?                  | 84                     |
-| radius                  | double?                  | 56                     |
-| backgroundColor         | Color?                   | Color(0xFFBBDEFB)      |
-| selectedBackgroundColor | Color?                   | Colors.blue            |
-| textColor         | Color?                   | Colors.blue   |
-| selectedTextColor | Color?                   | Colors.white            |
-| weekDayTextStyle        | TextStyle?               | TextStyle(fontSize: 12, color: Colors.blue)  |
-| selectedWeekDayTextStyle | TextStyle?              | TextStyle(fontSize: 12, color: Colors.white) |
-| dayTextStyle            | TextStyle?               | TextStyle(fontSize: 16, color: Colors.blue, fontWeight: FontWeight.bold)  |
-| selectedDayTextStyle    | TextStyle?               | TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold) |
-| monthTextStyle        | TextStyle?               | TextStyle(fontSize: 12, color: Colors.blue)  |
-| selectedMonthTextStyle | TextStyle?              | TextStyle(fontSize: 12, color: Colors.white) |
-| hasSelectedItemShadow       | bool?                    | true                   |
-| markedDotColor              | Color?                   | Colors.blue            |
-| selectedMarkedDotColor      | Color?                   | Colors.white           |
+| Parameter                   | Type                     | Default Value                                                                               | Description                                             |
+|-----------------------------|--------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| `startDate`                 | `DateTime`              | `—`                                                                                            | The starting date of the picker.                       |
+| `endDate`                   | `DateTime`              | `—`                                                                                            | The ending date of the picker.                         |
+| `initialSelectedDate`       | `DateTime?`             | `null`                                                                                      | The date initially selected when the picker loads.     |
+| `markedDates`               | `List<DateTime>?`       | `null`                                                                                      | Dates marked with a dot or special indication.         |
+| `onDateSelected`            | `Function(DateTime?)`   | `—`                                                                                         | Callback triggered when a date is selected.            |
+| `isPersianDate`             | `bool`                  | `true`                                                                                      | Whether the picker uses the Persian calendar system.   |
+| `datePickerHeight`          | `double`                | `112`                                                                                       | The height of the date picker.                         |
+| `gap`                       | `double`                | `—`                                                                                            | Gap between date tiles.                                |
+| `width`                     | `double`                | `84`                                                                                        | The width of each date tile.                           |
+| `verticalPadding`           | `double`                | `12`                                                                                        | Vertical padding inside each date tile.                |
+| `radius`                    | `double`                | `56`                                                                                        | Corner radius for tiles.                               |
+| `backgroundColor`           | `Color`                 | `Color(0xFFBBDEFB)`                                                                         | Background color for inactive tiles.                   |
+| `selectedBackgroundColor`   | `Color`                 | `Colors.blue`                                                                               | Background color for selected tiles.                   |
+| `onBackgroundColor`         | `Color`                 | `Colors.blue`                                                                               | Default text color for inactive tiles.                 |
+| `selectedOnBackgroundColor` | `Color`                 | `Colors.white`                                                                              | Text color for selected tiles.                         |
+| `weekDayTextStyle`          | `TextStyle?`            | `TextStyle(fontSize: 12)`                                                                   | Style for weekday labels.                              |
+| `dayTextStyle`              | `TextStyle?`            | `TextStyle(fontSize: 16, fontWeight: FontWeight.bold)`                                      | Style for day labels.                                  |
+| `monthTextStyle`            | `TextStyle?`            | `TextStyle(fontSize: 12)`                                                                   | Style for month labels.                                |
+| `hasShadow`                 | `bool`                  | `true`                                                                                      | Whether tiles have a shadow effect.                    |
+| `shadows`                   | `List<BoxShadow>`       | `[BoxShadow(color: Colors.blue, blurRadius: 25, spreadRadius: -12, offset: Offset(0, 16))]` | List of shadows for selected tiles.   |
 
-## Donation
-<a href="https://www.coffeebede.com/ariaramin"> <img class="img-fluid" src="https://coffeebede.ir/DashboardTemplateV2/app-assets/images/banner/default-yellow.svg" width="210" /> </a>
+## Migration Guide
+- Replace `margin` with `gap`.
+- Replace `contentPadding` with `verticalPadding`.
+- Replace `hasSelectedItemShadow` with `hasShadow`.
+- Deprecated parameter `textColor` has been removed.
+- Deprecated parameter `selectedTextColor` has been removed.
+- Deprecated parameter `selectedWeekDayTextStyle` has been removed.
+- Deprecated parameter `selectedDayTextStyle` has been removed.
+- Deprecated parameter `selectedMonthTextStyle` has been removed.
+- Deprecated parameter `markedDotColor` has been removed.
+- Deprecated parameter `selectedMarkedDotColor` has been removed.

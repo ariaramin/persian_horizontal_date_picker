@@ -1,10 +1,12 @@
 name: persian_horizontal_date_picker
 description: A customizable horizontal date picker library for Flutter. Support both jalali and gregorian dates.
-version: 0.1.7
+version: 2.0.0
+homepage: https://github.com/ariaramin/persian_horizontal_date_picker
 repository: https://github.com/ariaramin/persian_horizontal_date_picker
+issue_tracker: https://github.com/ariaramin/persian_horizontal_date_picker/issues
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=2.19.6 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
@@ -12,7 +14,8 @@ dependencies:
     sdk: flutter
 
   scroll_to_index: ^3.0.1
-  shamsi_date: ^1.0.1
+  shamsi_date: ^1.0.4
+  provider: ^6.1.2
 
 
 dev_dependencies:
