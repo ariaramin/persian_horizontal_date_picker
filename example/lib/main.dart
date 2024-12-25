@@ -18,31 +18,41 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Persian Horizontal Date Picker"),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              PersianHorizontalDatePicker(
-                startDate: DateTime.now(),
-                endDate: DateTime.now().add(const Duration(days: 30)),
-                initialSelectedDate: DateTime.now(),
-                markedDates: [DateTime.now()],
-                isPersianDate: true,
-                datePickerHeight: 112,
-                contentPadding: const EdgeInsets.all(8),
-                width: 84,
-                radius: 56,
-                backgroundColor: const Color(0xFFBBDEFB),
-                selectedBackgroundColor: Colors.blue,
-                textColor: Colors.blue,
-                selectedTextColor: Colors.white,
-                hasSelectedItemShadow: true,
-                markedDotColor: Colors.blue,
-                selectedMarkedDotColor: Colors.white,
-                onDateSelected: (date) {},
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            PersianHorizontalDatePicker(
+              startDate: DateTime.now(),
+              endDate: DateTime.now().add(const Duration(days: 30)),
+              initialSelectedDate: DateTime.now(),
+              markedDates: [DateTime.now()],
+              isPersianDate: true,
+              datePickerHeight: 112,
+              width: 84,
+              verticalPadding: 12,
+              radius: 56,
+              backgroundColor: const Color(0xFFBBDEFB),
+              selectedBackgroundColor: Colors.blue,
+              onBackgroundColor: Colors.blue,
+              selectedOnBackgroundColor: Colors.white,
+              weekDayTextStyle: const TextStyle(fontSize: 12),
+              dayTextStyle: const TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
               ),
-            ],
-          ),
+              monthTextStyle: const TextStyle(fontSize: 12),
+              hasShadow: true,
+              shadows: const [
+                BoxShadow(
+                  color: Colors.blue,
+                  blurRadius: 25,
+                  spreadRadius: -12,
+                  offset: Offset(0, 16),
+                ),
+              ],
+              onDateSelected: (date) {},
+            ),
+          ],
         ),
       ),
     );
